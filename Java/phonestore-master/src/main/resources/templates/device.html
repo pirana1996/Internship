@@ -1,0 +1,38 @@
+<!-- Section Content -->
+<div th:fragment="content">
+    <section id="home" class="g-bg-img-hero g-pos-rel u-bg-overlay g-bg-darkblue-opacity-0_7--after g-pt-150"
+             style="background-image: url(/images/promo.jpg);">
+
+        <div class="container u-bg-overlay__inner g-bottom-minus-70 px-0">
+            <div class="row u-shadow-v23 g-theme-bg-blue-dark-v2 mx-0">
+                <div class="col-md-6 px-0">
+                    <div class="js-carousel text-center u-carousel-v5 g-overflow-hidden h-100 g-max-height-50vh"
+                         data-infinite="true"
+                         data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-40 g-height-40 g-font-size-20 g-color-white g-color-primary--hover g-bg-primary g-bg-white--hover g-transition-0_2 g-transition--ease-in"
+                         data-arrow-left-classes="fa fa-angle-left g-left-0"
+                         data-arrow-right-classes="fa fa-angle-right g-right-0">
+                        <div class="js-slide g-bg-img-hero g-min-height-50vh"
+                             th:style="'background-image: url(/'+${device.photoUrl}+');background-size:contain'"
+                             style=""></div>
+
+                        <div class="js-slide g-bg-img-hero g-min-height-50vh"
+                             style="background-image: url(/assets/img-temp/1000x667/img2.jpg);"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex g-min-height-50vh g-theme-color-gray-dark-v1 g-px-50 g-py-80 g-py-50--md g-py-20--lg">
+                    <div class="align-self-center w-100">
+                        <h2 class="text-uppercase g-font-weight-700 g-font-size-30 g-color-primary g-mb-10"
+                            th:text="${device.name}"></h2>
+                        <h3 class="text-uppercase g-font-weight-500 g-font-size-13 g-color-white g-mb-20"
+                            th:text="${device.manufacturer.name}"></h3>
+                        <p class="g-font-size-14" th:text="${device.description}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Content -->
+
+
+</div>

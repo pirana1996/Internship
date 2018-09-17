@@ -1,0 +1,19 @@
+<div th:fragment="content">
+    <section id="home" class="g-bg-img-hero g-pos-rel  g-pt-100"
+    >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Add New Category</h1>
+                    <form action="#" th:action="@{/category/save}" th:object="${category}" method="post">
+                        <p>Name: <input class="form-control" type="text" th:field="*{name}"/></p>
+                        <p><input class="btn btn-success" type="submit" value="Submit"/> <input class="btn btn-info"
+                                                                                                type="reset"
+                                                                                                value="Reset"/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

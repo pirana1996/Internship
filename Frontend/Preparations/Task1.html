@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*td{*/
+            /*border: 1px solid black;*/
+        /*}*/
+        .btn{
+            width: 30%;
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var body = document.getElementsByTagName("body")[0];
+        var div = document.createElement("div");
+        div.style.width = "75%";
+
+        var table = document.createElement("table");
+
+        for(var i=0, counter=0; i<3; i++){
+            var row = table.insertRow(i);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            var btn1 = document.createElement("Button");
+            var btn2 = document.createElement("Button");
+            var btn3 = document.createElement("Button");
+
+
+            btn1.setAttribute("style", "width:30%; height:48px;");
+            btn2.style.width = "30%";
+            btn2.style.height = "48px";
+            btn3.classList.add("btn");
+
+            btn1.innerHTML = ++counter;
+            btn1.setAttribute("id", counter);
+            btn2.innerHTML = ++counter;
+            btn2.setAttribute("id", counter);
+            btn3.innerHTML = ++counter;
+            btn3.setAttribute("id", counter);
+
+            if(i==1){
+                btn2.addEventListener("click", () => {
+                    var tmp = document.getElementById("1").innerHTML;
+                    document.getElementById("1").innerHTML = document.getElementById("4").innerHTML;
+                    document.getElementById("4").innerHTML = document.getElementById("7").innerHTML;
+                    document.getElementById("7").innerHTML = document.getElementById("8").innerHTML;
+                    document.getElementById("8").innerHTML = document.getElementById("9").innerHTML;
+                    document.getElementById("9").innerHTML = document.getElementById("6").innerHTML;
+                    document.getElementById("6").innerHTML = document.getElementById("3").innerHTML;
+                    document.getElementById("3").innerHTML = document.getElementById("2").innerHTML;
+                    document.getElementById("2").innerHTML = tmp;
+                });
+            }
+            cell1.appendChild(btn1);
+            cell2.appendChild(btn2);
+            cell3.appendChild(btn3);
+        }
+
+//        table.setAttribute("style", "border: 1px solid black;");
+
+        div.appendChild(table);
+        body.appendChild(div);
+    </script>
+</body>
+</html>

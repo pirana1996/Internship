@@ -1,0 +1,19 @@
+/* Add here all your css styles (customizations) */
+.width-100 {
+	width:100%;
+}
+
+#guests p.g-mb-20 {
+	font-size:11px;
+}
+
+.g-pb-170--md {
+	margin-bottom:30px !important;
+}
+.g-pb-170--md {
+}
+
+.g-py-100 {
+	padding-top:30px !important;
+	padding-bottom:30px !important;
+}

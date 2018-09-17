@@ -1,0 +1,18 @@
+<div th:fragment="content">
+    <section id="home" class="g-bg-img-hero g-pos-rel  g-pt-100"
+    >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Login</h1>
+                    <form action="#" th:action="@{/login}"  method="post">
+                        <p>Username: <input class="form-control" type="text" name="username"/></p>
+                        <p>Password: <input class="form-control" type="password" name="password" /></p>
+                        <p><input class="btn btn-success" type="submit" value="Submit"/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

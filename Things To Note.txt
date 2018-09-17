@@ -1,0 +1,11 @@
+Webpack
+nodejs
+npm
+
+TypeScript(primary angular language) converted into javascript,
+using tsc compiler and after that is executed on browser.
+
+As soon as the program executes it is in runtime state. 
+Programs that provide enviroment for running are called runtime enviroment
+
+angular client and webpack

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 75%;
+        }
+        button{
+            width: 30%;
+            height: 48px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var body = document.getElementsByTagName("body")[0];
+        var div = document.createElement("div");
+        div.setAttribute('id', 'btns');
+        for(var i=0; i<9; i++)
+        {
+            var btn = document.createElement("button");
+            btn.innerHTML = i+1;
+            btn.setAttribute("id", "btn"+(i+1));
+            div.appendChild(btn);
+        }
+        body.appendChild(div);
+
+        document.getElementById("btn5").addEventListener("click", eventListener);
+
+        function eventListener(){
+            var tmp = document.getElementById("btn1").innerHTML;
+            document.getElementById("btn1").innerHTML = document.getElementById("btn4").innerHTML;
+            document.getElementById("btn4").innerHTML = document.getElementById("btn7").innerHTML;
+            document.getElementById("btn7").innerHTML = document.getElementById("btn8").innerHTML;
+            document.getElementById("btn8").innerHTML = document.getElementById("btn9").innerHTML;
+            document.getElementById("btn9").innerHTML = document.getElementById("btn6").innerHTML;
+            document.getElementById("btn6").innerHTML = document.getElementById("btn3").innerHTML;
+            document.getElementById("btn3").innerHTML = document.getElementById("btn2").innerHTML;
+            document.getElementById("btn2").innerHTML = tmp;
+
+        }
+
+    </script>
+</body>
+</html>

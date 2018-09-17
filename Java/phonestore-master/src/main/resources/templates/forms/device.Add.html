@@ -1,0 +1,46 @@
+<div th:fragment="content">
+    <section id="home" class="g-bg-img-hero g-pos-rel  g-pt-100"
+    >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Add New Device</h1>
+                    <form action="#" enctype="multipart/form-data" th:action="@{/device/save}" th:object="${device}" method="post">
+                        <p>Name: <input class="form-control" type="text" th:field="*{name}"/></p>
+                        <p>Description: <textarea rows="4" class="form-control" th:field="*{description}"></textarea>
+                        </p>
+                        <p>Price: <input class="form-control" type="number" th:field="*{price}"/></p>
+                        <p>Is promoted: <input type="checkbox" th:field="*{promoted}"/></p>
+                        <p>Photo URL: <input class="form-control" type="text" th:field="*{photoUrl}"/></p>
+                        <p>Category:
+                            <select class="form-control" th:field="*{category.id}">
+                                <option th:each="category : ${categories}" th:value="${{category.id}}"
+                                        th:text="${category.name}">-Category-
+                                </option>
+                            </select>
+                        </p>
+
+                        <p>Manufacturer:
+                            <select class="form-control" th:field="*{manufacturer.id}">
+                                <option th:each="manufacturer : ${manufacturers}" th:value="${{manufacturer.id}}"
+                                        th:text="${manufacturer.name}">-Manufacturer-
+                                </option>
+                            </select>
+                        </p>
+
+
+                        <p>Photo:
+                            <input type="file" name="file" />
+                        </p>
+
+
+                        <p><input class="btn btn-success" type="submit" value="Submit"/> <input class="btn btn-info"
+                                                                                                type="reset"
+                                                                                                value="Reset"/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

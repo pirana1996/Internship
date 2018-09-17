@@ -1,0 +1,20 @@
+group 'com.sorsix.interns'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+/*
+    Spring is modular framework. And one modules are dependant on others.
+    Spring context library is dependant of other libraries(spring-beans and spring core).
+ */
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: '5.0.5.RELEASE'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

@@ -1,0 +1,19 @@
+http port: 80
+
+https port: 443
+
+chrome ctrl+f5 : reload cache
+
+virtual DOM?
+
+angular web build tool: angular CLI using webpack (this is done when running 'ng serve')
+
+JIT vs AOT compiler
+
+files that should not go on version control: compiled, dependencies, files specific to an IDE
+	node_modules NEVER GOES on version control, they are NOT part of our source, they are dependencies
+
+
+class in typescript just describes a JSON object
+
+json pipe {{ hero | json }} (good for debugging)

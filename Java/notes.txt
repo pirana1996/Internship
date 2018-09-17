@@ -1,0 +1,34 @@
+gradle-wrapper
+ctrl+shift+t creates junit test
+mock engine
+factory design pattern
+DI framework (autowire) [search about java di frameworks. We are working with spring di.]
+gradle - build tool [builds our project with all dependencies we needed]
+spring context - dependencies for spring-framework
+spring context has his own dependencies
+component scan
+ApplicationContext is graph of objects
+default scope for configuration(design patterns: singleton, prototype, ...)
+@Autowired() - required parameter is for optional dependencies.
+Core spring;
+reflection; dynamic proxies in java;
+class loader
+-----
+gradle install dependencies only once and store them on disk
+automatic restart from spring dev tools
+ctrl + f9
+json jackson library serialize java pojo objects
+via browser url get request is always created
+
+curl -Method Post http://localhost:8080/cars/post
+
+for jackson serializaton of custom object we should have default constructor and setters [example in get request which parameter is translated to Car]
+don't use the model class for logical parsing of json, create another one specialized for that purpouse.
+
+java validation api[@NotNull, @NotEmpty, ...]
+create unit test for service class - on the task.
+java 8 date api - local date time
+
+From tutorial:
+	Annotated Controllers
+See about controller advice
